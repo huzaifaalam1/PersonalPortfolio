@@ -27,9 +27,9 @@ const projectList = [
   {
     title: 'Personal Portfolio',
     image: '/images/portfolio.png',
-    website: '',
-    source: 'https://github.com/huzaifaalam1/PersonalPortolio',
-    status: 'Comming Soon'
+    website: 'personal-portfolio-chi-fawn.vercel.app',
+    source: 'https://github.com/huzaifaalam1/PersonalPortfolio',
+    status: 'Live'
   },
   {
     title: 'Twiiter Sample App',

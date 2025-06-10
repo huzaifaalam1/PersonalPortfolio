@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+#contact svg:hover {
+  color: #0d6efd;
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
 }
