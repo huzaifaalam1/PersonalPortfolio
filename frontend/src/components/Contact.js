@@ -68,13 +68,13 @@ const Contact = () => {
         <Col md={6} className="text-center mt-4 mt-md-0">
           <p>You can also reach me on:</p>
           <div className="d-flex justify-content-center gap-4">
-            <a href="https://github.com/huzaifaalam" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/huzaifaalam1" target="_blank" rel="noopener noreferrer">
               <FaGithub size={30} />
             </a>
             <a href="https://linkedin.com/in/syed-huzaifa-alam" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={30} />
             </a>
-            <a href="mailto:huzaifaalam@email.arizona.edu">
+            <a href="mailto:huzaifaalam@arizona.edu">
               <FaEnvelope size={30} />
             </a>
           </div>
