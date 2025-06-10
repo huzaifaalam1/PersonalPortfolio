@@ -71,7 +71,7 @@ const Contact = () => {
             <a href="https://github.com/huzaifaalam" target="_blank" rel="noopener noreferrer">
               <FaGithub size={30} />
             </a>
-            <a href="https://linkedin.com/in/huzaifaalam" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/syed-huzaifa-alam" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={30} />
             </a>
             <a href="mailto:huzaifaalam@email.arizona.edu">
