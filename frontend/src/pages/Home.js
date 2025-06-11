@@ -22,7 +22,7 @@ const Home = () => {
             <Col md={6} className="d-flex flex-column justify-content-center p-5">
               <h1 className="display-4">
                 Hi, I am Huzaifa{' '}
-                <span className={`wave-emoji ${animate ? 'wave-on-load' : ''}`}>👋</span>
+                <span className={`wave ${animate ? 'wave-on-load' : ''}`}>👋</span>
               </h1>
               <p className="lead">
                 I'm a software developer passionate about building full-stack web apps and learning new technologies.
