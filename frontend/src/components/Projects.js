@@ -8,21 +8,21 @@ const projectList = [
     image: '/images/mycampusrewards.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/HackArizona',
-    status: 'Comming Soon'
+    status: 'Not Live Yet'
   },
   {
     title: 'Weather App',
     image: '/images/weather.png',
     website: 'https://weather-app.example.com',
     source: 'https://github.com/huzaifaalam1/weather-app',
-    status: 'Live'
+    status: 'Not Live Yet'
   },
   {
     title: 'InfluencerConnect',
     image: '/images/connect.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/InfluencerConnect',
-    status: 'Comming Soon'
+    status: 'Not Live Yet'
   },
   {
     title: 'Personal Portfolio',
@@ -33,10 +33,10 @@ const projectList = [
   },
   {
     title: 'Twiiter Sample App',
-    image: '/images/sample.png',
+    image: './public/sample.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/RubyRailsTraining',
-    status: 'Comming Soon'
+    status: 'Not Live Yet'
   }
 ];
 

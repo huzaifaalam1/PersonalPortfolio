@@ -51,7 +51,7 @@ const Experiences = () => {
   return (
     <section id="experiences" className="py-5 bg-light">
       <Container>
-        <h2 className="mb-5">My Journey 📈</h2>
+        <h2 className="mb-5">My Professional Journey 📈</h2>
         <div className="timeline">
           {milestones.map((item, idx) => (
             <div key={idx} className="timeline-item">
