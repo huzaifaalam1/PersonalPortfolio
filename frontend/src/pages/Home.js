@@ -1,5 +1,6 @@
 // src/pages/Home.js
 import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Home = () => {
