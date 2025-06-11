@@ -51,6 +51,10 @@ html {
   transform-origin: 70% 70%;
 }
 
+.wave-on-load {
+  animation: wave-animation 1s ease-in-out;
+}
+
 @keyframes wave-animation {
   0% { transform: rotate(0deg); }
   15% { transform: rotate(14deg); }
