@@ -5,35 +5,35 @@ import ProjectCard from './ProjectCard';
 const projectList = [
   {
     title: 'MyCampusRewards',
-    image: '/images/mycampusrewards.png',
+    image: '/mycampusrewards.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/HackArizona',
     status: 'Not Live Yet'
   },
   {
     title: 'Weather App',
-    image: '/images/weather.png',
+    image: '/weather.png',
     website: 'https://weather-app.example.com',
     source: 'https://github.com/huzaifaalam1/weather-app',
     status: 'Not Live Yet'
   },
   {
     title: 'InfluencerConnect',
-    image: '/images/connect.png',
+    image: '/connect.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/InfluencerConnect',
     status: 'Not Live Yet'
   },
   {
     title: 'Personal Portfolio',
-    image: '/images/portfolio.png',
+    image: '/portfolio.png',
     website: 'personal-portfolio-chi-fawn.vercel.app',
     source: 'https://github.com/huzaifaalam1/PersonalPortfolio',
     status: 'Live'
   },
   {
     title: 'Twiiter Sample App',
-    image: './public/sample.png',
+    image: '/sample.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/RubyRailsTraining',
     status: 'Not Live Yet'
