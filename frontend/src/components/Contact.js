@@ -1,19 +1,43 @@
-import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
+import { db } from '../firebaseConfig';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState({ message: '', variant: '' });
+
+  useEffect(() => {
+    if (status.message) {
+      const timer = setTimeout(() => setStatus({ message: '', variant: '' }), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add backend logic here later
-    alert('Message sent! (Not really, just a demo)');
-    setFormData({ name: '', email: '', message: '' });
+    setStatus({ message: 'Sending...', variant: 'info' });
+
+    try {
+      await addDoc(collection(db, 'contactMessages'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        createdAt: Timestamp.now(),
+      });
+
+      setStatus({ message: 'Message sent! Thanks for reaching out.', variant: 'success' });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error adding document: ', error);
+      setStatus({ message: 'Oops, something went wrong. Please try again later.', variant: 'danger' });
+    }
   };
 
   return (
@@ -59,9 +83,15 @@ const Contact = () => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" disabled={status.variant === 'info'}>
               Send Message
             </Button>
+
+            {status.message && (
+              <Alert variant={status.variant} className="mt-3">
+                {status.message}
+              </Alert>
+            )}
           </Form>
         </Col>
 

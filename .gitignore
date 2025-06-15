@@ -1,24 +1,23 @@
-# Frontend dependencies
-/frontend/node_modules
-/frontend/.pnp
-/frontend/.pnp.js
+# Node modules
+/frontend/node_modules/
 
-# Frontend testing
-/frontend/coverage
+# Package manager files
+/frontend/package-lock.json
+/frontend/yarn.lock
 
-# Frontend production build
-/frontend/build
+# Production build
+/frontend/build/
 
-# Frontend misc
+# Coverage reports from tests
+/frontend/coverage/
+
+# Firebase/Env/Secrets
+/frontend/.env
+/frontend/.env.*
+
+# Misc
 /frontend/.DS_Store
-/frontend/.env.local
-/frontend/.env.development.local
-/frontend/.env.test.local
-/frontend/.env.production.local
-
+/frontend/pnp.*
 /frontend/npm-debug.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
-
-# Backend dependencies
-/backend/node_modules
