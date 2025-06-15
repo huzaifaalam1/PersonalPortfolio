@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button, Badge } from 'react-bootstrap';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const ProjectCard = ({ title, image, website, source, status }) => {
+const ProjectCard = ({ title, description, image, website, source, status }) => {
   return (
     <Card className="shadow-sm h-100">
       <Card.Img variant="top" src={image} alt={`${title} preview`} />
@@ -13,6 +13,12 @@ const ProjectCard = ({ title, image, website, source, status }) => {
             {status}
           </Badge>
         </Card.Title>
+        
+        {description && (
+            <Card.Text className="mb-3" style={{ whiteSpace: "pre-line" }}>
+                {description}
+            </Card.Text>
+        )}
 
         <div className="mt-auto d-flex justify-content-between">
           <Button
