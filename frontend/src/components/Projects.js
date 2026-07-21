@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const projectList = [
   {
     title: 'MyCampusRewards',
-    description: `MyCampusRewards is a gamified web application designed to boost student engagement at the University of Arizona by rewarding involvement in campus life. Students earn points by attending events, joining clubs, and participating in student-led activities, which contribute toward league milestones, leaderboard rankings, and badge-based multipliers. The platform features a dynamic milestone system that reflects engagement levels, a leaderboard showcasing the top five active students, and an activity log that tracks recent point-earning actions. Users can enhance their rewards by purchasing Bronze, Silver, or Gold badges, each offering increasing point multipliers. A built-in chatbot assistant guides users on how to earn points, while authentication is handled securely through university credentials using Firebase Auth, with user data managed in Firestore. \n\nTech Stack: React • Node.js • Express • Firebase (Auth & Firestore)`,
+    description: `MyCampusRewards is a gamified web application designed to boost student engagement at the University of Arizona by rewarding involvement in campus life. Students earn points by attending events, joining clubs, and participating in student-led activities, which contribute toward league milestones, leaderboard rankings, and badge-based multipliers. The platform features a dynamic milestone system that reflects engagement levels, a leaderboard showcasing the top five active students, and an activity log that tracks recent point-earning actions. Users can enhance their rewards by purchasing Bronze, Silver, or Gold badges, each offering increasing point multipliers. A built-in chatbot assistant guides users on how to earn points, while authentication is handled securely through university credentials using Firebase Auth, with user data managed in Firestore. Managed to win Hack Arizona 25 with this project. \n\nTech Stack: React • Node.js • Express • Firebase (Auth & Firestore)`,
     image: '/mycampusrewards.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/HackArizona',
@@ -41,6 +41,22 @@ const projectList = [
     image: '/sample.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/RubyRailsTraining',
+    status: 'Not Live Yet'
+  },
+  {
+    title: 'SwipeBite',
+    description: 'SwipeBite is a Tinder-style food discovery platform that helps users find restaurants through a fast, personalized swiping experience. Users can like or skip restaurant options, while a machine-learning recommendation pipeline ranks future suggestions based on restaurant attributes and individual preferences. The platform integrates Google Places API to retrieve current restaurant details, including ratings, location data, photos, and other metadata. Supabase provides secure authentication, persistent sessions, and storage for user preferences across devices. \n\nTech Stack: Next.js • React • Supabase • Python • Machine Learning • Google Places API',
+    image: '/swipe.png',
+    website: '',
+    source: 'https://github.com/huzaifaalam1/swipebite',
+    status: 'Not Live Yet'
+  },
+  {
+    title: 'AgenticMarketplace',
+    description: 'AgenticMarketplace is an AI-assisted B2B marketplace designed to support secure transactions between buyers and suppliers. The platform manages the complete deal lifecycle, including supplier discovery, contract generation, negotiation workflows, escrow-backed payments, messaging, and milestone tracking. An AI-driven trust scoring system evaluates transaction history, dispute rates, and behavioral signals to help users assess counterparties and reduce fraud. Verifiable deal updates and centralized communication allow both parties to monitor progress throughout each transaction. \n\nTech Stack: Next.js • Supabase • PostgreSQL • Vercel',
+    image: '/marketplace.png',
+    website: '',
+    source: 'https://github.com/huzaifaalam1/AgenticMarketplace',
     status: 'Not Live Yet'
   }
 ];
