@@ -1,56 +1,50 @@
 // src/pages/Home.js
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { FiArrowUpRight, FiArrowDown, FiTerminal } from 'react-icons/fi';
+import { Container } from 'react-bootstrap';
 import '../App.css'
 
 const Home = () => {
-  const [animate, setAnimate] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimate(false);
-    }, 1000); // Stop waving after 1s
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
-      <section id="home" className="bg-light text-dark min-vh-100 d-flex align-items-center">
-        <Container>
-          <Row>
-            <Col md={6} className="d-flex flex-column justify-content-center p-5">
-              <h1 className="display-4">
-                Hi, I am Huzaifa{' '}
-                <span className={`wave ${animate ? 'wave-on-load' : ''}`}>👋</span>
-              </h1>
-              <p className="lead">
-                I'm a software developer passionate about building full-stack web apps and learning new technologies.
-              </p>
-            </Col>
-            <Col md={6} className="d-none d-md-block p-5">
-              <img
-                src="/aboutme.jpg"
-                alt="Developer illustration"
-                className="img-fluid rounded shadow"
-              />
-            </Col>
-          </Row>
-        </Container>
+      <section id="home" className="hero-section">
+        <div className="hero-intro"><span className="status-dot" /> SOFTWARE DEVELOPER · TUCSON, AZ</div>
+        <h1>Curiosity into code.<br />Ideas into <span>impact.</span></h1>
+        <div className="hero-bottom">
+          <div className="hero-copy"><p>Hey, I'm Huzaifa. I build software for real people,<br className="desktop-break" /> research labs, and whatever comes next.</p><a className="pill-button" href="#projects">Explore my work <FiArrowUpRight /></a><a className="text-link" href="https://github.com/huzaifaalam1" target="_blank" rel="noopener noreferrer">GitHub <FiArrowUpRight /></a></div>
+          <div className="hero-note"><FiTerminal /><span>FULL STACK THINKING.<br />ENDLESS POSSIBILITIES.</span></div>
+        </div>
+        <a href="#about" className="hero-scroll"><FiArrowDown /> A little about me</a>
+        <span className="hero-coordinate" aria-hidden="true">32.2226° N / 110.9747° W</span>
       </section>
+      <div className="specialty-strip" aria-label="Areas of interest"><span>FULL STACK DEVELOPMENT</span><i>✳</i><span>AI AGENTS</span><i>✳</i><span>DEVELOPER INFRASTRUCTURE</span><i>✳</i><span>DISTRIBUTED SYSTEMS</span></div>
 
-      <section id="about" className="py-5 bg-white">
+      <section id="about" className="about-section">
         <Container>
-          <h2 className="mb-4">About Me 🙋🏽</h2>
+          <div className="section-heading"><span className="eyebrow">01 / THE PERSON BEHIND THE CODE</span><h2>Always curious.<br /><span>Always building.</span></h2></div>
+          <div className="about-layout"><aside className="about-aside"><div className="portrait-wrap"><img src="/aboutme.jpg" alt="Huzaifa Alam" loading="lazy" /><span className="portrait-tag">Hello, world. ↗</span></div><div className="about-caption"><span>UNIVERSITY OF ARIZONA</span><strong>CS '27 · Tucson, AZ</strong></div><div className="about-facts"><div><strong>12</strong><span>biological research labs</span></div><div><strong>1st</strong><span>Hack Arizona '25</span></div></div></aside><div className="about-copy">
           <p>
-            Hello! My name is Syed Muhammad Huzaifa Alam. I prefer to go by Huzaifa. My pronouns are He/Him. I began my journey in the field of Computer Science in the fall of 2023 when I came to study at the University of Arizona. I am deeply fascinated by how technology shapes our world and love building software that solves real problems or makes the world an exciting place.
+            Hey! I'm <strong>Huzaifa</strong>, a Computer Science student at the University of Arizona, graduating in May 2027, and a software developer who loves turning complicated problems into software that actually works.
           </p>
           <p>
-            Through my academic journey and personal projects, I've gained experience with multiple programming languages and modern frameworks. I am eager to learn new tools and techniques. This portfolio serves as my journal to document my journey through the tech world/industry I want to be part of. Beyond coding, I enjoy collaborating with others and sharing knowledge to build better solutions together.
+            My journey started with a simple weather app at my first hackathon in 2023. Since then, I've gone from building websites to developing production software used by researchers, designing laboratory management systems, and exploring how AI agents can automate real engineering workflows.
           </p>
           <p>
-            When I am not programming, you can find me exploring new tech trends, playing soccer with friends, or listening to music.
+            Currently, I'm a <strong>Software Developer at University Information Technology Services (UITS)</strong>, where I help build full-stack systems supporting research laboratories at the University of Arizona. Previously, I worked at the BIO5 Research Institute, developing internal applications and automation tools for researchers. Across these roles, I've worked with Python, Django, Vue.js, Ruby on Rails, Docker, and AWS, learning what it takes to build software beyond just getting it to run locally.
           </p>
+          <p>
+            Lately, I've been particularly interested in <strong>AI agents, developer infrastructure, and distributed systems</strong>. I'm fascinated by the idea of building software that doesn't just respond to users but can reason through problems, interact with tools, and execute complex workflows safely. My AI DevOps Cloud Agent is one of the projects where I've been exploring exactly that.
+          </p>
+          <p>
+            Outside of work, I've won Hack Arizona 2025 with two friends, served as a teaching assistant for Software Development, and had opportunities to learn from engineers at companies like Netflix and Komatsu.
+          </p>
+          <p>
+            When I'm not coding, you'll probably find me watching the NBA or soccer, playing soccer with friends, discovering new music, or going down a rabbit hole about some new technology.
+          </p>
+          <p>
+            <strong>I'm always looking to learn, build things that matter, and work with people who are just as excited about technology as I am.</strong>
+          </p>
+          </div></div>
         </Container>
       </section>
     </>

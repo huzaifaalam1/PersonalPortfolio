@@ -4,20 +4,48 @@ import ProjectCard from './ProjectCard';
 
 const projectList = [
   {
-    title: 'MyCampusRewards',
-    description: `MyCampusRewards is a gamified web application designed to boost student engagement at the University of Arizona by rewarding involvement in campus life. Students earn points by attending events, joining clubs, and participating in student-led activities, which contribute toward league milestones, leaderboard rankings, and badge-based multipliers. The platform features a dynamic milestone system that reflects engagement levels, a leaderboard showcasing the top five active students, and an activity log that tracks recent point-earning actions. Users can enhance their rewards by purchasing Bronze, Silver, or Gold badges, each offering increasing point multipliers. A built-in chatbot assistant guides users on how to earn points, while authentication is handled securely through university credentials using Firebase Auth, with user data managed in Firestore. Managed to win Hack Arizona 25 with this project. \n\nTech Stack: React • Node.js • Express • Firebase (Auth & Firestore)`,
-    image: '/mycampusrewards.png',
-    website: '',
-    source: 'https://github.com/huzaifaalam1/HackArizona',
-    status: 'Not Live Yet'
+    "title": "AI DevOps Cloud Agent",
+    "description": "An AI-assisted DevOps command-line tool designed to simplify containerization, deployment diagnostics, and infrastructure troubleshooting for Next.js applications.\n\nThe agent analyzes repositories, generates Docker configurations, validates deployments through HTTP readiness checks, and uses Groq-hosted language models to produce structured, evidence-backed diagnostics.\n\nUnlike an unrestricted AI agent, the system follows a supervised scan → analyze → propose → approve → execute → validate workflow, keeping potentially destructive operations behind explicit user approval. It includes bounded automated repairs, rollback support, secret redaction, audit journals, and process timeouts.\n\nBuilt with reliability and safety in mind, the project has been validated through 181 automated tests and Docker smoke tests. It reflects my interest in combining AI reasoning with deterministic engineering workflows to build developer tools that are both useful and trustworthy.",
+    "stack": "Python • Typer • Rich • Groq API • Docker • Docker Compose • Codex",
+    "source": "https://github.com/huzaifaalam1/devops-agent",
+    "image": null,
+    "category": "AI / Infrastructure",
+    "featured": true,
+    "prototype": false,
+    "website": null
   },
   {
-    title: 'Weather App',
-    description: 'My first project. A weather application that fetches real-time weather data for any location worldwide using a public weather API. It supports translation of the weather information into six different languages, making it accessible to a global user base. The app allows users to search by city and displays key weather metrics such as temperature, humidity, wind speed, and general conditions. \n\nTech Stack: React • Node.js • Firebase',
-    image: '/weather-app.png',
-    website: 'https://weather-app.example.com',
-    source: 'https://github.com/huzaifaalam1/weather-app',
-    status: 'Not Live Yet'
+    "title": "AgenticMarketplace",
+    "description": "An AI-assisted B2B marketplace designed to make business transactions more transparent, secure, and efficient.\n\nI led a team of four in building a full-stack platform that supports supplier discovery, contract generation, negotiation, authenticated messaging, and milestone-based transaction workflows.\n\nOne of the platform's core features is its AI-assisted trust-scoring system, which evaluates transaction history, dispute rates, and behavioral signals to help buyers and suppliers assess potential risks before entering business relationships.\n\nThe application also provides centralized deal tracking, allowing both parties to manage agreements, monitor transaction progress, and maintain a verifiable history of deal activity.\n\nThis project gave me hands-on experience with full-stack architecture, collaborative development, database design, and incorporating AI into practical business workflows.",
+    "stack": "Next.js • React • Supabase • PostgreSQL • Gemini • Vercel • Codex",
+    "source": "https://github.com/huzaifaalam1/AgenticMarketplace",
+    "image": "/marketplace.png",
+    "category": "Full Stack / AI",
+    "featured": true,
+    "prototype": false,
+    "website": null
+  },
+  {
+    "title": "SwipeBite",
+    "description": "A Tinder-inspired restaurant discovery platform that makes finding somewhere to eat faster, more interactive, and personalized.\n\nInstead of scrolling through endless restaurant listings, users swipe right or left on restaurant cards to indicate their preferences. Behind the scenes, a machine-learning recommendation pipeline ranks future suggestions using user behavior, restaurant attributes, and previously expressed preferences.\n\nThe platform integrates Google Places API to retrieve restaurant information, including ratings, photos, locations, and other metadata. Supabase handles authentication, user profiles, and persistent preferences, allowing users to maintain their personalized experience across sessions.\n\nSwipeBite combines my interest in full-stack development, recommendation systems, and building intuitive user experiences around real-world problems.",
+    "stack": "Next.js • React • Python • Machine Learning • Supabase • Google Places API",
+    "source": "https://github.com/huzaifaalam1/swipebite",
+    "image": "/swipe.png",
+    "category": "Full Stack / ML",
+    "featured": true,
+    "prototype": false,
+    "website": null
+  },
+  {
+    "title": "MyCampusRewards",
+    "description": "An award-winning gamified platform designed to increase student engagement and encourage participation in campus activities at the University of Arizona.\n\nBuilt during Hack Arizona 2025 with two teammates, MyCampusRewards allows students to earn points by attending events, joining organizations, and participating in campus activities. The platform includes leaderboards, achievement milestones, activity tracking, and Bronze, Silver, and Gold reward badges with different point multipliers.\n\nWe also integrated an AI-powered chatbot using AWS Bedrock to help students navigate the platform and discover ways to earn rewards. Firebase Authentication and Firestore provide user management and persistent data storage.\n\nOur project won first place in the \"Improve the UA\" challenge, making it one of the most memorable milestones in my software engineering journey.",
+    "stack": "React • Node.js • Express • Firebase Auth • Firestore • AWS Bedrock",
+    "source": "https://github.com/huzaifaalam1/HackArizona",
+    "image": "/mycampusrewards.png",
+    "category": "Hackathon Winner",
+    "featured": false,
+    "prototype": true,
+    "website": null
   },
   {
     title: 'InfluencerConnect',
@@ -25,58 +53,43 @@ const projectList = [
     image: '/influencerconnect.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/InfluencerConnect',
-    status: 'Not Live Yet'
+    category: "Full Stack"
   },
   {
     title: 'Personal Portfolio',
-    description: 'A modern, responsive portfolio website showcasing my projects, skills, and experience as a software engineer. I made this document my journey as I continue through my exciting career learning and exploring new technologies and to provide an easy way for recruiters, developers, and potential collaborators to learn about my work and get in touch. The site features smooth navigation, clear sections for skills and contact information, and integrates a contact form for direct communication. \n\nTech Stack: React • Bootstrap • Express • Node.js',
+    description: 'A modern, responsive portfolio website showcasing my projects, skills, and experience as a software engineer. I made this to document my journey as I continue through my exciting career learning and exploring new technologies and to provide an easy way for recruiters, developers, and potential collaborators to learn about my work and get in touch. The site features smooth navigation, clear sections for skills and contact information, and integrates a contact form for direct communication. \n\nTech Stack: React • Bootstrap • Firebase',
     image: '/portfolio.png',
-    website: 'personal-portfolio-chi-fawn.vercel.app',
+    website: 'https://personal-portfolio-chi-fawn.vercel.app',
     source: 'https://github.com/huzaifaalam1/PersonalPortfolio',
-    status: 'Live'
+    category: "Portfolio"
   },
   {
-    title: 'Twiiter Sample App',
+    title: 'Twitter Sample App',
     description: 'A simple Twitter-like social media application built with Ruby on Rails as part of my learning journey with the framework. The app allows users to sign up, create posts (tweets), follow other users, and view a timeline of tweets. This project helped me understand core Rails concepts such as MVC architecture, RESTful routing, database associations, and user authentication. \n\nTech Stack: Ruby on Rails • PostgreSQL • Bootstrap',
     image: '/sample.png',
     website: '',
     source: 'https://github.com/huzaifaalam1/RubyRailsTraining',
-    status: 'Not Live Yet'
+    category: "Rails"
   },
   {
-    title: 'SwipeBite',
-    description: 'SwipeBite is a Tinder-style food discovery platform that helps users find restaurants through a fast, personalized swiping experience. Users can like or skip restaurant options, while a machine-learning recommendation pipeline ranks future suggestions based on restaurant attributes and individual preferences. The platform integrates Google Places API to retrieve current restaurant details, including ratings, location data, photos, and other metadata. Supabase provides secure authentication, persistent sessions, and storage for user preferences across devices. \n\nTech Stack: Next.js • React • Supabase • Python • Machine Learning • Google Places API',
-    image: '/swipe.png',
+    title: 'Weather App',
+    description: 'My first project. A weather application that fetches real-time weather data for any location worldwide using a public weather API. It supports translation of the weather information into six different languages, making it accessible to a global user base. The app allows users to search by city and displays key weather metrics such as temperature, humidity, wind speed, and general conditions. \n\nTech Stack: React • Node.js • Firebase',
+    image: '/weather-app.png',
     website: '',
-    source: 'https://github.com/huzaifaalam1/swipebite',
-    status: 'Not Live Yet'
-  },
-  {
-    title: 'AgenticMarketplace',
-    description: 'AgenticMarketplace is an AI-assisted B2B marketplace designed to support secure transactions between buyers and suppliers. The platform manages the complete deal lifecycle, including supplier discovery, contract generation, negotiation workflows, escrow-backed payments, messaging, and milestone tracking. An AI-driven trust scoring system evaluates transaction history, dispute rates, and behavioral signals to help users assess counterparties and reduce fraud. Verifiable deal updates and centralized communication allow both parties to monitor progress throughout each transaction. \n\nTech Stack: Next.js • Supabase • PostgreSQL • Vercel',
-    image: '/marketplace.png',
-    website: '',
-    source: 'https://github.com/huzaifaalam1/AgenticMarketplace',
-    status: 'Not Live Yet'
+    source: 'https://github.com/huzaifaalam1/weather-app',
+    category: "First Project"
   }
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-5 bg-light">
+    <section id="projects" className="projects-section">
       <Container>
-        <h2 className="text-center mb-4">My Projects</h2>
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {projectList.map((project, index) => (
-            <Col key={index}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                website={project.website}
-                source={project.source}
-                status={project.status}
-              />
+        <div className="section-heading"><span className="eyebrow">02 / SELECTED WORK</span><h2>Built to solve.<br /><span>Made to explore.</span></h2><p>A few ideas I turned into working software.</p></div>
+        <Row xs={1} md={2} lg={2} className="g-4">
+          {projectList.map((project) => (
+            <Col key={project.title}>
+              <ProjectCard {...project} number={String(projectList.indexOf(project) + 1).padStart(2, '0')} />
             </Col>
           ))}
         </Row>

@@ -1,15 +1,5 @@
-// src/components/Footer.js
 import React from 'react';
-import { Container } from 'react-bootstrap';
-
-const Footer = () => {
-  return (
-    <footer className="bg-light text-center py-3 mt-5">
-      <Container>
-        <small>© {new Date().getFullYear()} Syed Muhammad Huzaifa Alam. All rights reserved.</small>
-      </Container>
-    </footer>
-  );
-};
-
-export default Footer;
+import { FiArrowUp } from 'react-icons/fi';
+export default function Footer() {
+  return <footer className="site-footer"><a className="wordmark" href="#home">HA<span>.</span></a><span>© {new Date().getFullYear()} Huzaifa Alam · Built with curiosity.</span><a href="#home">Back to top <FiArrowUp /></a></footer>;
+}

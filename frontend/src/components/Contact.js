@@ -41,8 +41,8 @@ const Contact = () => {
   };
 
   return (
-    <Container id="contact" className="py-5">
-      <h2 className="text-center mb-4">Get in Touch</h2>
+    <Container id="contact" className="contact-section">
+      <div className="section-heading"><span className="eyebrow">04 / SAY HELLO</span><h2>Have something<br /><span>in mind?</span></h2><p>Let’s build something worth being excited about.</p></div>
       <Row>
         <Col md={6}>
           <Form onSubmit={handleSubmit}>
@@ -99,13 +99,13 @@ const Contact = () => {
           <p>You can also reach me on:</p>
           <div className="d-flex justify-content-center gap-4">
             <a href="https://github.com/huzaifaalam1" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={30} />
+              <FaGithub size={26} /><span className="visually-hidden">GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/syed-huzaifa-alam" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={30} />
+            <a href="https://linkedin.com/in/-huzaifa-alam" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={26} /><span className="visually-hidden">LinkedIn</span>
             </a>
             <a href="mailto:huzaifaalam@arizona.edu">
-              <FaEnvelope size={30} />
+              <FaEnvelope size={26} /><span className="visually-hidden">Email</span>
             </a>
           </div>
         </Col>
