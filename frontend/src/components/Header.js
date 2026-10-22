@@ -1,27 +1,16 @@
-// src/components/Header.js
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { FiArrowUpRight, FiMenu, FiX } from 'react-icons/fi';
 
-const Header = () => {
+export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
-    <Navbar expand="lg" sticky="top" className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <Container>
-        <Navbar.Brand href="#home">Syed Muhammad Huzaifa Alam</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="https://github.com/huzaifaalam1" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </Nav.Link>
-            <Nav.Link href="#experiences">Experiences</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className="site-header">
+      <a className="wordmark" href="#home" aria-label="Huzaifa Alam home">HA<span>.</span></a>
+      <button className="menu-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>{open ? <FiX /> : <FiMenu />}</button>
+      <nav id="main-navigation" className={open ? 'site-nav is-open' : 'site-nav'} aria-label="Main navigation">
+        {[['About', 'about'], ['Work', 'projects'], ['Journey', 'experiences'], ['Résumé', 'resume']].map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>{label}</a>)}
+        <a className="nav-contact" href="#contact" onClick={() => setOpen(false)}>Let's talk <FiArrowUpRight /></a>
+      </nav>
+    </header>
   );
-};
-
-export default Header;
+}
